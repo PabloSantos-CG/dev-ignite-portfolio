@@ -109,13 +109,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium mb-1">Email</p>
-                    <a href="mailto:pablo@example.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      pablo@example.com
+                    <a href="mailto:referencialpablo.contato@outlook.com" className="text-muted-foreground hover:text-primary transition-colors">
+                      referencialpablo.contato@outlook.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 group">
+                {/* <div className="flex items-start gap-4 group">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone className="w-5 h-5 text-primary" />
                   </div>
@@ -125,7 +125,7 @@ export default function Contact() {
                       +55 (11) 99999-9999
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 <div className="flex items-start gap-4 group">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -133,7 +133,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p className="font-medium mb-1">Localização</p>
-                    <p className="text-muted-foreground">São Paulo, Brasil</p>
+                    <p className="text-muted-foreground">Lauro de Freitas, Bahia, Brasil</p>
                   </div>
                 </div>
               </div>
@@ -157,7 +157,7 @@ export default function Contact() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
+                    <Label htmlFor="email">E-mail *</Label>
                     <Input
                       id="email"
                       name="email"

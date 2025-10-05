@@ -73,7 +73,7 @@ export default function Footer() {
               © {new Date().getFullYear()} Pablo Santos. Todos os direitos reservados.
             </p>
             <p className="flex items-center gap-1">
-              Desenvolvido com <Heart className="w-4 h-4 text-primary inline" /> e React
+              Desenvolvido com Lovable
             </p>
           </div>
         </div>

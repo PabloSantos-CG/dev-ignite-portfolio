@@ -1,5 +1,5 @@
 import { Code2, Rocket, Target, TrendingUp } from "lucide-react";
-import developerPortrait from "@/assets/developer-portrait.jpg";
+import developerPortrait from "@/assets/developer-portrait.png";
 
 const highlights = [
   {

@@ -80,20 +80,11 @@ export default function Skills() {
                 {technologies.map((tech, index) => (
                   <div
                     key={tech.name}
-                    className="group p-6 rounded-xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 animate-slide-up"
+                    className="group p-8 rounded-xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 animate-slide-up flex flex-col items-center text-center"
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{tech.icon}</div>
-                    <h3 className="font-semibold mb-2">{tech.name}</h3>
-                    
-                    {/* Progress Bar */}
-                    <div className="w-full h-2 bg-muted rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-1000 ease-out"
-                        style={{ width: `${tech.level}%` }}
-                      />
-                    </div>
-                    <p className="text-xs text-muted-foreground mt-2">{tech.level}% Proficiência</p>
+                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{tech.icon}</div>
+                    <h3 className="font-semibold text-lg">{tech.name}</h3>
                   </div>
                 ))}
               </div>

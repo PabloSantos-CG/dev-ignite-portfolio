@@ -40,10 +40,10 @@ export default function About() {
           </div>
 
           {/* Main Content */}
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+          <div className="grid md:grid-cols-5 gap-12 items-center mb-16">
             {/* Image */}
-            <div className="order-2 md:order-1 animate-slide-up">
-              <div className="relative group">
+            <div className="order-2 md:order-1 md:col-span-2 animate-slide-up">
+              <div className="relative group max-w-md mx-auto">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-2xl blur opacity-25 group-hover:opacity-40 transition duration-300" />
                 <img
                   src={developerPortrait}
@@ -54,7 +54,7 @@ export default function About() {
             </div>
 
             {/* Text Content */}
-            <div className="order-1 md:order-2 space-y-6 animate-fade-in">
+            <div className="order-1 md:order-2 md:col-span-3 space-y-6 animate-fade-in">
               <h3 className="text-3xl font-bold">Pablo Santos</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Desenvolvedor Full Stack apaixonado por criar experiências digitais excepcionais. 

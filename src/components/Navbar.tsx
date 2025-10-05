@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.svg";
 
 const navItems = [
   { name: "Início", href: "#inicio" },
@@ -30,8 +31,8 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <a href="/" className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-            Pablo Santos
+          <a href="/" className="flex items-center">
+            <img src={logo} alt="Pablo Santos" className="h-10 w-auto" />
           </a>
 
           {/* Desktop Navigation */}

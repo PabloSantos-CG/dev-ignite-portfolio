@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Code, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SiReact, SiNextdotjs, SiNodedotjs, SiLaravel, SiTypescript, SiPostgresql, SiMongodb, SiDocker } from "react-icons/si";
+import { IconType } from "react-icons";
 
-const technologies = [
-  { name: "React.js", level: 95, icon: "⚛️" },
-  { name: "Next.js", level: 90, icon: "▲" },
-  { name: "Node.js", level: 92, icon: "🟢" },
-  { name: "PHP/Laravel", level: 88, icon: "🐘" },
-  { name: "TypeScript", level: 90, icon: "🔷" },
-  { name: "PostgreSQL", level: 85, icon: "🐘" },
-  { name: "MongoDB", level: 82, icon: "🍃" },
-  { name: "Docker", level: 80, icon: "🐳" },
+const technologies: { name: string; icon: IconType; color: string }[] = [
+  { name: "React.js", icon: SiReact, color: "#61DAFB" },
+  { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "PHP/Laravel", icon: SiLaravel, color: "#FF2D20" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  { name: "Docker", icon: SiDocker, color: "#2496ED" },
 ];
 
 const education = [
@@ -77,16 +79,22 @@ export default function Skills() {
           <div className="animate-fade-in">
             {activeTab === "tech" ? (
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {technologies.map((tech, index) => (
-                  <div
-                    key={tech.name}
-                    className="group p-8 rounded-xl bg-background border border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 animate-slide-up flex flex-col items-center text-center"
-                    style={{ animationDelay: `${index * 50}ms` }}
-                  >
-                    <div className="text-5xl mb-4 group-hover:scale-110 transition-transform">{tech.icon}</div>
-                    <h3 className="font-semibold text-lg">{tech.name}</h3>
-                  </div>
-                ))}
+                {technologies.map((tech, index) => {
+                  const IconComponent = tech.icon;
+                  return (
+                    <div
+                      key={tech.name}
+                      className="group relative p-8 rounded-xl bg-card border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 animate-slide-up flex flex-col items-center text-center overflow-hidden"
+                      style={{ animationDelay: `${index * 50}ms` }}
+                    >
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                      <div className="relative z-10 w-16 h-16 mb-4 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-all duration-300 group-hover:scale-110">
+                        <IconComponent className="w-10 h-10 text-foreground group-hover:text-primary transition-colors duration-300" />
+                      </div>
+                      <h3 className="relative z-10 font-bold text-lg text-foreground group-hover:text-primary transition-colors duration-300">{tech.name}</h3>
+                    </div>
+                  );
+                })}
               </div>
             ) : (
               <div className="grid md:grid-cols-3 gap-6">

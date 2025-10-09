@@ -81,7 +81,9 @@ export default function Projects() {
                 className="w-full"
               >
                 <CarouselContent>
-                  {repos.map((repo) => (
+                  {repos
+                    .filter(repo => repo.name.toLowerCase() !== "pablosantos-cg")
+                    .map((repo) => (
                     <CarouselItem key={repo.id} className="md:basis-1/2 lg:basis-1/3">
                       <div className="p-1 h-full">
                         <Card className="group h-full border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 bg-background flex flex-col">

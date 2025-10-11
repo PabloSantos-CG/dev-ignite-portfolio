@@ -77,39 +77,39 @@ export default function Contact() {
   };
 
   return (
-    <section id="contato" className="py-20 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-radial opacity-30" />
+    <section id="contato" className="py-12 sm:py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-radial opacity-20 sm:opacity-30" />
       
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <div className="text-center mb-10 sm:mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
               Entre em <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Contato</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-base sm:text-lg max-w-2xl mx-auto px-4">
               Tem um projeto em mente? Vamos conversar e transformar sua ideia em realidade
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-5 gap-12">
+          <div className="grid lg:grid-cols-5 gap-8 sm:gap-12">
             {/* Contact Info */}
-            <div className="lg:col-span-2 space-y-8 animate-slide-up">
+            <div className="lg:col-span-2 space-y-6 sm:space-y-8 animate-slide-up">
               <div>
-                <h3 className="text-2xl font-bold mb-6">Vamos trabalhar juntos!</h3>
-                <p className="text-muted-foreground mb-8">
+                <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6">Vamos trabalhar juntos!</h3>
+                <p className="text-muted-foreground text-sm sm:text-base mb-6 sm:mb-8">
                   Estou sempre aberto a discutir novos projetos, ideias criativas ou oportunidades de colaboração.
                 </p>
               </div>
 
-              <div className="space-y-4">
-                <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Mail className="w-5 h-5 text-primary" />
+              <div className="space-y-3 sm:space-y-4">
+                <div className="flex items-start gap-3 sm:gap-4 group">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                    <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   </div>
-                  <div>
-                    <p className="font-medium mb-1">Email</p>
-                    <a href="mailto:referencialpablo.contato@outlook.com" className="text-muted-foreground hover:text-primary transition-colors">
+                  <div className="min-w-0">
+                    <p className="font-medium mb-1 text-sm sm:text-base">Email</p>
+                    <a href="mailto:referencialpablo.contato@outlook.com" className="text-muted-foreground hover:text-primary transition-colors text-xs sm:text-sm break-all">
                       referencialpablo.contato@outlook.com
                     </a>
                   </div>
@@ -127,13 +127,13 @@ export default function Contact() {
                   </div>
                 </div> */}
 
-                <div className="flex items-start gap-4 group">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <MapPin className="w-5 h-5 text-primary" />
+                <div className="flex items-start gap-3 sm:gap-4 group">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform flex-shrink-0">
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   </div>
-                  <div>
-                    <p className="font-medium mb-1">Localização</p>
-                    <p className="text-muted-foreground">Lauro de Freitas, Bahia, Brasil</p>
+                  <div className="min-w-0">
+                    <p className="font-medium mb-1 text-sm sm:text-base">Localização</p>
+                    <p className="text-muted-foreground text-xs sm:text-sm">Lauro de Freitas, Bahia, Brasil</p>
                   </div>
                 </div>
               </div>
@@ -141,23 +141,23 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="lg:col-span-3 animate-fade-in">
-              <form onSubmit={handleSubmit} className="space-y-6 p-8 rounded-2xl bg-card border border-border">
-                <div className="grid sm:grid-cols-2 gap-6">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Nome *</Label>
+              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6 p-4 sm:p-6 md:p-8 rounded-2xl bg-card border border-border">
+                <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <Label htmlFor="name" className="text-sm">Nome *</Label>
                     <Input
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Seu nome"
-                      className={errors.name ? "border-destructive" : ""}
+                      className={errors.name ? "border-destructive text-sm" : "text-sm"}
                     />
                     {errors.name && <p className="text-xs text-destructive">{errors.name}</p>}
                   </div>
 
-                  <div className="space-y-2">
-                    <Label htmlFor="email">E-mail *</Label>
+                  <div className="space-y-1.5 sm:space-y-2">
+                    <Label htmlFor="email" className="text-sm">E-mail *</Label>
                     <Input
                       id="email"
                       name="email"
@@ -165,35 +165,35 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="seu@email.com"
-                      className={errors.email ? "border-destructive" : ""}
+                      className={errors.email ? "border-destructive text-sm" : "text-sm"}
                     />
                     {errors.email && <p className="text-xs text-destructive">{errors.email}</p>}
                   </div>
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Assunto *</Label>
+                <div className="space-y-1.5 sm:space-y-2">
+                  <Label htmlFor="subject" className="text-sm">Assunto *</Label>
                   <Input
                     id="subject"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Sobre o que você quer falar?"
-                    className={errors.subject ? "border-destructive" : ""}
+                    className={errors.subject ? "border-destructive text-sm" : "text-sm"}
                   />
                   {errors.subject && <p className="text-xs text-destructive">{errors.subject}</p>}
                 </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Mensagem *</Label>
+                <div className="space-y-1.5 sm:space-y-2">
+                  <Label htmlFor="message" className="text-sm">Mensagem *</Label>
                   <Textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Conte-me sobre seu projeto..."
-                    rows={6}
-                    className={errors.message ? "border-destructive" : ""}
+                    rows={5}
+                    className={errors.message ? "border-destructive text-sm" : "text-sm"}
                   />
                   {errors.message && <p className="text-xs text-destructive">{errors.message}</p>}
                 </div>
@@ -201,7 +201,7 @@ export default function Contact() {
                 <Button
                   type="submit"
                   size="lg"
-                  className="w-full"
+                  className="w-full text-sm sm:text-base"
                   disabled={isSubmitting}
                   variant="hero"
                 >
@@ -210,7 +210,7 @@ export default function Contact() {
                   ) : (
                     <>
                       Enviar Mensagem
-                      <Send className="ml-2 w-4 h-4" />
+                      <Send className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
                     </>
                   )}
                 </Button>

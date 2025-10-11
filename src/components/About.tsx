@@ -54,8 +54,8 @@ export default function About() {
             </div>
 
             {/* Text Content */}
-            <div className="order-1 md:order-2 md:col-span-3 space-y-6 animate-fade-in">
-              <h3 className="text-3xl font-bold">Pablo Santos</h3>
+            <article className="order-1 md:order-2 md:col-span-3 space-y-6 animate-fade-in">
+              <h3 className="text-3xl font-bold">Pablo Santos - Desenvolvedor Full Stack</h3>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Desenvolvedor Full Stack apaixonado por criar experiências digitais excepcionais. 
                 Com expertise sólida em <span className="text-primary font-semibold">Back-End</span> (Node.js, PHP/Laravel) 
@@ -77,7 +77,7 @@ export default function About() {
                   <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                 </a>
               </div>
-            </div>
+            </article>
           </div>
 
           {/* Highlights Grid */}

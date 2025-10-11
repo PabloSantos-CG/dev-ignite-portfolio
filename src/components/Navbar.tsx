@@ -31,8 +31,8 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          <a href="/" className="flex items-center">
-            <img src={logo} alt="Pablo Santos" className="h-8 w-auto" />
+          <a href="/" className="flex items-center" aria-label="Pablo Santos - Página Inicial">
+            <img src={logo} alt="Pablo Santos - Desenvolvedor Full Stack Logo" className="h-8 w-auto" />
           </a>
 
           {/* Desktop Navigation */}

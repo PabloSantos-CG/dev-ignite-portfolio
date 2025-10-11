@@ -29,7 +29,7 @@ export default function Projects() {
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        const response = await fetch('https://api.github.com/users/PabloSantos-CG/repos?sort=updated&per_page=6');
+        const response = await fetch('https://api.github.com/users/PabloSantos-CG/repos');
         const data = await response.json();
         setRepos(data);
       } catch (error) {

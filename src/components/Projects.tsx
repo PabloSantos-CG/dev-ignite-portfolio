@@ -114,10 +114,15 @@ export default function Projects() {
                                   {repo.language}
                                 </span>
                               )}
-                              {repo.topics.slice(0, 2).map((topic) => (
-                                <span key={topic} className="px-3 py-1 rounded-full text-xs font-medium bg-muted text-muted-foreground">
-                                  {topic}
-                                </span>
+                              {repo.topics
+                                .filter((topic) => topic.toLowerCase() !== repo.language.toLowerCase())
+                                .slice(0, 3)
+                                .map((topic) => (
+                                  <span 
+                                    key={topic} 
+                                    className="px-3 py-1 rounded-full text-xs font-medium bg-muted text-muted-foreground">
+                                      {topic}
+                                  </span>
                               ))}
                             </div>
                           </CardContent>

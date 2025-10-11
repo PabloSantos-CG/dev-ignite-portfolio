@@ -17,23 +17,11 @@ const technologies: { name: string; icon: IconType; color: string }[] = [
 
 const education = [
   {
-    title: "Bacharelado em Ciência da Computação",
-    institution: "Universidade Federal",
-    period: "2018 - 2022",
-    description: "Formação sólida em fundamentos de computação, algoritmos e engenharia de software",
-  },
-  {
-    title: "Certificação Full Stack JavaScript",
-    institution: "Plataforma Online",
-    period: "2022",
-    description: "Especialização avançada em desenvolvimento web moderno com JavaScript/TypeScript",
-  },
-  {
-    title: "AWS Certified Developer",
-    institution: "Amazon Web Services",
-    period: "2023",
-    description: "Certificação profissional em desenvolvimento e deploy de aplicações cloud",
-  },
+    title: "Tecnólogo em Análise e Desenvolvimento de Sistemas",
+    institution: "UniFECAF",
+    period: "2023 - 2025",
+    description: "Formação acadêmica ADS, explorando conceitos de algoritmos, estruturas de dados e engenharia de software.",
+  }
 ];
 
 export default function Skills() {

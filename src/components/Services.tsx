@@ -49,7 +49,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="servicos" className="py-20 relative overflow-hidden">
+    <section id="servicos" className="py-12 sm:py-20 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-radial opacity-30" />
       
       <div className="container mx-auto px-4 relative z-10">
@@ -65,7 +65,7 @@ export default function Services() {
           </div>
 
           {/* Services Carousel */}
-          <div className="relative px-12 animate-slide-up">
+          <div className="relative px-2 sm:px-6 md:px-12 animate-slide-up">
             <Carousel
               opts={{
                 align: "start",
@@ -75,7 +75,7 @@ export default function Services() {
             >
               <CarouselContent>
                 {services.map((service, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
                     <div className="p-1 h-full">
                       <Card className="group h-full border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 bg-card/50 backdrop-blur">
                         <CardHeader>
@@ -100,8 +100,8 @@ export default function Services() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="bg-card border-border hover:bg-primary hover:text-primary-foreground" />
-              <CarouselNext className="bg-card border-border hover:bg-primary hover:text-primary-foreground" />
+              <CarouselPrevious className="hidden sm:flex bg-card border-border hover:bg-primary hover:text-primary-foreground" />
+              <CarouselNext className="hidden sm:flex bg-card border-border hover:bg-primary hover:text-primary-foreground" />
             </Carousel>
           </div>
 

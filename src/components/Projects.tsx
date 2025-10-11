@@ -54,11 +54,11 @@ export default function Projects() {
   };
 
   return (
-    <section id="projetos" className="py-20 bg-card/30">
+    <section id="projetos" className="py-12 sm:py-20 bg-card/30">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 animate-fade-in">
+          <div className="text-center mb-10 sm:mb-16 animate-fade-in">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               Meus <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Projetos</span>
             </h2>
@@ -72,7 +72,7 @@ export default function Projects() {
               <div className="w-12 h-12 border-4 border-primary/30 border-t-primary rounded-full animate-spin" />
             </div>
           ) : (
-            <div className="relative px-12 animate-slide-up">
+            <div className="relative px-2 sm:px-8 md:px-12 animate-slide-up">
               <Carousel
                 opts={{
                   align: "start",
@@ -84,7 +84,7 @@ export default function Projects() {
                   {repos
                     .filter(repo => repo.name.toLowerCase() !== "pablosantos-cg")
                     .map((repo) => (
-                    <CarouselItem key={repo.id} className="md:basis-1/2 lg:basis-1/3">
+                    <CarouselItem key={repo.id} className="sm:basis-1/2 lg:basis-1/3">
                       <div className="p-1 h-full">
                         <Card className="group h-full border-border hover:border-primary/50 transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 bg-background flex flex-col">
                           <CardHeader>
@@ -148,8 +148,8 @@ export default function Projects() {
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="bg-card border-border hover:bg-primary hover:text-primary-foreground" />
-                <CarouselNext className="bg-card border-border hover:bg-primary hover:text-primary-foreground" />
+                <CarouselPrevious className="hidden sm:flex bg-card border-border hover:bg-primary hover:text-primary-foreground" />
+                <CarouselNext className="hidden sm:flex bg-card border-border hover:bg-primary hover:text-primary-foreground" />
               </Carousel>
             </div>
           )}

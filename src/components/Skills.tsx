@@ -54,12 +54,12 @@ export default function Skills() {
           </div>
 
           {/* Tab Buttons */}
-          <div className="flex justify-center gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-12">
             <Button
               variant={activeTab === "tech" ? "default" : "outline"}
               size="lg"
               onClick={() => setActiveTab("tech")}
-              className="gap-2"
+              className="gap-2 w-full sm:w-auto"
             >
               <Code className="w-5 h-5" />
               Tecnologias
@@ -68,7 +68,7 @@ export default function Skills() {
               variant={activeTab === "education" ? "default" : "outline"}
               size="lg"
               onClick={() => setActiveTab("education")}
-              className="gap-2"
+              className="gap-2 w-full sm:w-auto"
             >
               <GraduationCap className="w-5 h-5" />
               Formação

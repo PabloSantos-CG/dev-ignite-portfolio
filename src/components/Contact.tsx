@@ -109,8 +109,8 @@ export default function Contact() {
                   </div>
                   <div className="min-w-0">
                     <p className="font-medium mb-1 text-sm sm:text-base">Email</p>
-                    <a href="mailto:referencialpablo.contato@outlook.com" className="text-muted-foreground hover:text-primary transition-colors text-xs sm:text-sm break-all">
-                      referencialpablo.contato@outlook.com
+                    <a href="mailto:pablocomercial.contato@gmail.com" className="text-muted-foreground hover:text-primary transition-colors text-xs sm:text-sm break-all">
+                      pablocomercial.contato@gmail.com
                     </a>
                   </div>
                 </div>

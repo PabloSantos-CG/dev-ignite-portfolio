@@ -29,6 +29,7 @@ export default function Hero() {
             <Button
               size="xl"
               variant="hero"
+              className="w-full sm:w-48"
               onClick={() => document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Iniciar Projeto
@@ -38,6 +39,7 @@ export default function Hero() {
             <Button
               size="xl"
               variant="outline"
+              className="w-full sm:w-48"
               onClick={() => window.open('https://www.linkedin.com/in/pablosantos-cg', '_blank')}
             >
               <Linkedin className="mr-2" />
@@ -47,6 +49,7 @@ export default function Hero() {
             <Button
               size="xl"
               variant="outline"
+              className="w-full sm:w-48"
               onClick={() => window.open('https://github.com/PabloSantos-CG', '_blank')}
             >
               <Github className="mr-2" />

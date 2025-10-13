@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { Code, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { SiReact, SiNextdotjs, SiNodedotjs, SiLaravel, SiTypescript, SiPostgresql, SiMongodb, SiDocker } from "react-icons/si";
+import { SiReact, SiNextdotjs, SiNodedotjs, SiLaravel, SiTypescript, SiPostgresql, SiMongodb, SiDocker, SiJavascript, SiPhp } from "react-icons/si";
 import { IconType } from "react-icons";
 
 const technologies: { name: string; icon: IconType; color: string }[] = [
-  { name: "React.js", icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#000000" },
-  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-  { name: "PHP/Laravel", icon: SiLaravel, color: "#FF2D20" },
+  { name: "PHP", icon: SiPhp, color: "#777BB4" },
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
   { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "Laravel", icon: SiLaravel, color: "#FF2D20" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "React.js", icon: SiReact, color: "#61DAFB" },
+  { name: "Next.js", icon: SiNextdotjs, color: "#FFFFFF" },
   { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
   { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
   { name: "Docker", icon: SiDocker, color: "#2496ED" },

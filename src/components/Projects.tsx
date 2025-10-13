@@ -160,13 +160,14 @@ export default function Projects() {
           )}
 
           {/* View All Projects Link */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 px-4">
             <Button
               variant="outline"
-              size="lg"
+              size="default"
+              className="w-full sm:w-auto text-sm sm:text-base"
               onClick={() => window.open('https://github.com/PabloSantos-CG', '_blank')}
             >
-              <Github className="mr-2" />
+              <Github className="mr-2 w-4 h-4 sm:w-5 sm:h-5" />
               Ver todos os projetos no GitHub
             </Button>
           </div>

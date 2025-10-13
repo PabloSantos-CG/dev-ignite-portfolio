@@ -72,14 +72,49 @@ export default function Skills() {
                   return (
                     <div
                       key={tech.name}
-                      className="group relative p-8 rounded-xl bg-card border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-xl hover:shadow-primary/20 animate-slide-up flex flex-col items-center text-center overflow-hidden"
-                      style={{ animationDelay: `${index * 50}ms` }}
+                      className="group relative p-8 rounded-xl bg-card border-2 border-border hover:border-primary transition-all duration-300 hover:shadow-xl animate-slide-up flex flex-col items-center text-center overflow-hidden"
+                      style={{ 
+                        animationDelay: `${index * 50}ms`,
+                        boxShadow: `0 0 0 0 ${tech.color}20`
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.boxShadow = `0 20px 40px -10px ${tech.color}40`;
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.boxShadow = `0 0 0 0 ${tech.color}20`;
+                      }}
                     >
-                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                      <div className="relative z-10 w-16 h-16 mb-4 flex items-center justify-center rounded-lg bg-muted/50 group-hover:bg-primary/10 transition-all duration-300 group-hover:scale-110">
-                        <IconComponent className="w-10 h-10 text-foreground group-hover:text-primary transition-colors duration-300" />
+                      <div 
+                        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        style={{
+                          background: `linear-gradient(135deg, ${tech.color}05, ${tech.color}10)`
+                        }}
+                      />
+                      <div 
+                        className="relative z-10 w-16 h-16 mb-4 flex items-center justify-center rounded-lg bg-muted/50 transition-all duration-300 group-hover:scale-110"
+                        style={{
+                          backgroundColor: `${tech.color}10`
+                        }}
+                      >
+                        <IconComponent 
+                          className="w-10 h-10 transition-colors duration-300" 
+                          style={{ color: tech.color }}
+                        />
                       </div>
-                      <h3 className="relative z-10 font-bold text-lg text-foreground group-hover:text-primary transition-colors duration-300">{tech.name}</h3>
+                      <h3 
+                        className="relative z-10 font-bold text-lg text-foreground transition-colors duration-300"
+                        style={{
+                          color: undefined
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = tech.color;
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = '';
+                        }}
+                      >
+                        {tech.name}
+                      </h3>
                     </div>
                   );
                 })}

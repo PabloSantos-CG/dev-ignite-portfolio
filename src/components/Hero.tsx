@@ -15,7 +15,7 @@ export default function Hero() {
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h1 className="text-[46px] sm:text-5xl md:text-7xl font-bold leading-tight">
             Transformando <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent glow-text">ideias</span> em{" "}
             <span className="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">soluções</span>
           </h1>

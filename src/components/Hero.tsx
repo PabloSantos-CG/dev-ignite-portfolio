@@ -59,7 +59,7 @@ export default function Hero() {
 
           {/* Tech Stack Pills */}
           <div className="flex flex-wrap gap-3 justify-center pt-8">
-            {["React.js", "Next.js", "Node.js", "PHP/Laravel"].map((tech) => (
+            {["PHP/Laravel", "JavaScript/Node.Js", "Vue.Js", "React.Js" ].map((tech) => (
               <span
                 key={tech}
                 className="px-4 py-2 rounded-full bg-card border border-border text-sm font-medium hover:border-primary/50 transition-colors"
